@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.megadrop {
+  font-family: Rubik;
+  margin-top: -4em;
+  position: fixed;
+  width: 100%;
+  
+  background-color: white;
+  z-index: 2;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+.megam {
+  position: absolute;
+  background: white;
+  padding: 2.5em 2em 2em 4em;
+  width: 100%;
+  height: 100vh;
+  /*width: calc(100% - 4em);*/
+  /*height: calc(100vh - 4em);*/
+  display: none;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  z-index: 999;
+}
+
+.megam .logo-m {
+  cursor: pointer;
+  opacity: 0;
+  margin-right: 0;
+}
+.megam .close-btn {
+  float: right;
+  cursor: pointer;
+  opacity: 0;
+  margin-right: 0;
+  margin-top: -10px;
+}
+
+.megam .backdrop {
+  z-index: -999;
+  text-align: center;
+  opacity: 0;
+  width: 150%;
+}
+
+.megam ul {
+  list-style-type: none;
+  margin: 2em auto 5em auto;
+  padding: 0;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  width: 100%;
+  text-align: left;
+}
+
+.megam ul a {
+  color: #7982A8;
+  opacity: 0.8;
+  
+  
+  font-size: 1em;
+}
+
+.megam ul a:hover {
+  font-style: bold;
+  font-weight: 900;
+}
+
+.megam ul span {
+  color: #7982A8;
+  display: block;
+  font-size: .75em;
+  margin-top: 20px;
+}
+
+.megam ul li {
+  opacity: 0;
+  text-align: left;
+  
+  color: #7982A8;
+  
+  font-size: 1.4em;
+  line-height: 400%;
+  margin-top: 1em;
+}
+
+.show-menu {
+  display: block;
+  -webkit-animation: fancy-menu 0.8s ease-in forwards;
+          animation: fancy-menu 0.8s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  -webkit-animation: show-x 1s 0.9s forwards;
+          animation: show-x 1s 0.9s forwards;
+}
+.show-menu .logo-m {
+  -webkit-animation: show-x 1s 0.9s forwards;
+          animation: show-x 1s 0.9s forwards;
+}
+
+.show-menu .sky {
+  -webkit-animation: show-x 1s 0.9s forwards;
+          animation: show-x 1s 0.9s forwards;
+}
+
+.show-menu .backdrop {
+  -webkit-animation: show-x 1s 0.9s forwards;
+          animation: show-x 1s 0.9s forwards;
+}
+
+.show-menu li:nth-of-type(1) {
+  -webkit-animation: menu-item-anim .7s forwards 1s ease-in-out;
+          animation: menu-item-anim .7s forwards 1s ease-in-out;
+}
+
+.show-menu li:nth-of-type(2) {
+  -webkit-animation: menu-item-anim .7s forwards 1.3s ease-in-out;
+          animation: menu-item-anim .7s forwards 1.3s ease-in-out;
+}
+
+.show-menu li:nth-of-type(3) {
+  -webkit-animation: menu-item-anim .7s forwards 1.6s ease-in-out;
+          animation: menu-item-anim .7s forwards 1.6s ease-in-out;
+}
+
+.show-menu li:nth-of-type(4) {
+  -webkit-animation: menu-item-anim .7s forwards 1.9s ease-in-out;
+          animation: menu-item-anim .7s forwards 1.9s ease-in-out;
+}
+
+.show-menu li:nth-of-type(5) {
+  -webkit-animation: menu-item-anim .7s forwards 2.1s ease-in-out;
+          animation: menu-item-anim .7s forwards 2.1s ease-in-out;
+}
+
+.rem-menu {
+  display: block;
+  -webkit-animation: off-menu 1.2s ease-out;
+          animation: off-menu 1.2s ease-out;
+}
+
+.rem-menu .close-btn {
+  -webkit-animation: unshow-x 1s 0.9s forwards;
+          animation: unshow-x 1s 0.9s forwards;
+}
+.rem-menu .logo-m {
+  -webkit-animation: unshow-x 1s 0.9s forwards;
+          animation: unshow-x 1s 0.9s forwards;
+}
+
+.rem-menu li:nth-of-type(1) {
+  -webkit-animation: menu-item-anim2 .2s forwards 1s ease-out;
+          animation: menu-item-anim2 .2s forwards 1s ease-out;
+}
+
+.rem-menu li:nth-of-type(2) {
+  -webkit-animation: menu-item-anim2 .7s forwards 1.3s ease-out;
+          animation: menu-item-anim2 .7s forwards 1.3s ease-out;
+}
+
+.rem-menu li:nth-of-type(3) {
+  -webkit-animation: menu-item-anim2 .7s forwards 1.6s ease-out;
+          animation: menu-item-anim2 .7s forwards 1.6s ease-out;
+}
+
+.rem-menu li:nth-of-type(4) {
+  -webkit-animation: menu-item-anim2 .7s forwards 1.9s ease-in-out;
+          animation: menu-item-anim2 .7s forwards 1.9s ease-in-out;
+}
+
+.rem-menu li:nth-of-type(5) {
+  -webkit-animation: menu-item-anim2 .7s forwards 2.2s ease-in-out;
+          animation: menu-item-anim2 .7s forwards 2.2s ease-in-out;
+}
+
+@-webkit-keyframes fancy-menu {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes fancy-menu {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes unshow-x {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes unshow-x {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(75%);
+            transform: translateY(75%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(75%);
+            transform: translateY(75%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes off-menu {
+  from {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@keyframes off-menu {
+  from {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+@-webkit-keyframes menu-item-anim2 {
+  from {
+    -webkit-transform: translateY(75%);
+            transform: translateY(75%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes menu-item-anim2 {
+  from {
+    -webkit-transform: translateY(75%);
+            transform: translateY(75%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+/* Real */
+/*# sourceMappingURL=main.css.map */

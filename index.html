@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floy Foundation</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init('user_52WPVo7aLHj9ezYgwzKA0');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form1').addEventListener('submit', function(event) {
+                event.preventDefault();
+                //reset();
+                
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+               
+                this.response = "Information successfully submitted."
+                document.getElementById("myText").innerHTML = this.response;
+                emailjs.sendForm('rapyd_email', 'template_p8dt0rk', this);
+
+                document.getElementById('name').value=''; 
+                document.getElementById('email').value=''; 
+                document.getElementById('message').value=''; 
+            });
+            /*
+            document.getElementById('update_form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+               
+                this.response2 = "Email successfully submitted."
+                document.getElementById("myText2").innerHTML = this.response2;
+                emailjs.sendForm('rapyd_email', 'template_p8dt0rk', this);
+
+                document.getElementById('email-sub').value='';  
+            });
+            */
+        }
+    </script>
+
+
+     <!--Main style-->
+     <link rel="stylesheet" href="css/main.css">
+     <!--Hamburger Menu-->
+     <link rel="stylesheet" href="css/menu.css" />
+     <!--Mega Menu-->
+     <link rel="stylesheet" media="screen and (max-width: 950px)" href="css/m-menu.css">
+     <!--Hover style-->
+     <link rel="stylesheet" href="hoverlib/css/hover.css">
+     <!--Hover style-->
+     <link rel="stylesheet" href="css/select.css">
+     <!--Favicon-->
+     <link rel="icon" type="image/svg" href="images/svg/fav2.svg">
+</head>
+<body>
+
+    <div class="main-content">
+        <!--Hero-->
+        <section class="hero" id="hero">
+            <nav class="main-nav">
+                <div class="nav-content">
+                    <div class="logo-box">
+                        <img src="images/svg/logo-new.svg" alt="">
+                    </div>
+                    <div class="links-box">
+                        <ul class="nav-list">
+                            <li  class="link ">
+                                <a href="#about"
+                                    class="hvr-underline-from-left">
+                                     About
+                                </a>
+                            </li>
+                            <li  class="link ">
+                                <a href="#projects" class="hvr-underline-from-left"> Projects</a>
+                            </li>
+                            <li  class="link ">
+                                <a href="#contact" class="hvr-underline-from-left"> Contact</a>
+                            </li>
+                        </ul>
+                        <div class="nav-btn-box ">
+                            <a href="#contact">
+                                <button class="donate-btn">Donate </button> 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mobile-menu">
+                        <img src="images/svg/hamburger.svg" class="menu-btn" id="open-menu"
+                        alt="">
+                    </div>
+                </div>  
+            </nav>
+            <!--Mobile Menu Content-->
+            <div class="megadrop">
+                <nav class="megam" id="overlay">
+                    <img src="images/svg/logo-new.svg" class="logo-m" alt="">
+                    <img src="images/svg/close.svg" class="close-btn" id="close-menu" alt="">
+                    <ul>
+                        <li>
+                        <a class="hvr-float" href="#about" id="li-menu" >About</a>
+                        </li>
+                        <li>
+                        <a class="hvr-float" href="#projects" id="li-menu1">Projects</a> 
+                        </li>
+                        <li>
+                        <a class="hvr-float" href="#contact" id="li-menu2">Contact</a> 
+                        </li>
+                        <li >
+                        <a href="#contact" id="li-menu3">
+                             <button class="donate-btn">Donate </button> 
+                        </a>
+                        </li>
+                    </ul>
+               </nav>
+            </div> 
+
+            <div class="hero-content">
+                <div class="hero-left">
+                    <p class="hero-span">SAVE ANY HUMAN 
+                        <span class="line">__</span>
+                    </p>
+                    <h1 class="hero-title">
+                        Save Whole <br> Mankind.
+                    </h1>
+                    <p class="hero-desc">
+                        Help us to promote public health, 
+                        and provide affordable and accessible 
+                         
+                        healthcare to people who need it.
+                    </p>
+                </div>
+                <div class="hero-right">
+                    <img src="images/png/hero2.png" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+
+        <!--About-->
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="about-left">
+                    <p class="about-span">
+                        ABOUT US
+                        <div class="line-a"></div>
+                    </p>
+                    <h1 class="about-title">
+                        To Improve access to Healthcare and promote Public Health.
+                    </h1>
+                    <p class="about-desc">
+                        We are Nigeria’s foremost non-governmental organisation focused on using 
+                        digital technology in addressing the toxic mix of problems that has crumbled 
+                        the Nigerian healthcare system including inaccessibility of quality healthcare, 
+                        poor health infrastructure, and lack of proper public health promotion.
+                    </p>
+                    <p class="about-desc">
+                        Our innovative free telemedicine consultation and medication supply directly 
+                        benefit thousands of Nigerians with more operational projects spread across 
+                        932 remote villages and slums in the 36 states of Nigeria. Floy foundation 
+                        believes that members of the civil society needs to be fully involved in the 
+                        impact we are making. Our model of society driven change spurs us to continue 
+                        sensitising and engaging the civil society, making it an active partner in all we 
+                        do to drive change that is needed and improve health and lives of the 
+                        under-served, despite their social and financial challenges.
+                    </p>
+                    <p class="about-desc">
+                        We believe our approach would help reach out to more people and reduce the 
+                        elevated mortality rate caused by limited access to healthcare.  As we continue 
+                        to scale pinnacles of what, we will keep partnering with health tech companies 
+                        on making healthcare accessible to the poorest and the most deprived.
+                    </p>
+                </div>
+                <div class="about-right">
+                    <img class="hand" src="images/png/hands2.png" alt="" >
+                    <img class="hand-m" src="images/png/hands-i.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--Projects-->
+        <section class="projects" id="projects">
+            <div class="projects-content">
+                <div class="projects-header">
+                    <p class="projects-span"> 
+                        OUR PROJECTS 
+                    </p> 
+                    <h1 class="projects-title">
+                        Some Good Causes
+                    </h1>
+                </div>
+                <div class="projects-container">
+                    <div class="project">
+                        <img class="project-img"
+                        src="images/png/checker.png" alt="">
+                        <img class="health-logo"
+                        src="images/svg/cov-log.svg" alt="" >
+                        <p class="p-title">Covid-19 Symptom Checker</p>
+                        <div class="progress">
+                            <img src="images/svg/prog1.svg" alt="">
+                            <div class="completion">
+                                <p class="percent">100%</p>
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <p class="launch hvr-underline-from-left">
+                            <a href="https://checkcovid-19.com/coronavirus">
+                                Launch Project
+                            </a>
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img class="project-img"
+                        src="images/png/doctor.png" alt="">
+                        <img class="health-logo"
+                        src="images/svg/aegle.svg" alt="" >
+                        <p class="p-title">Online Doctor Consultation   </p>
+                        <div class="progress">
+                            <img src="images/svg/prog2.svg" alt="">
+                            <div class="completion">
+                                <p class="percent">90%</p>
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <p class="launch hvr-underline-from-left">
+                            <a href="http://aeglehealth.io/">
+                                Launch Project
+                            </a>
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img class="project-img"
+                        src="images/png/access2.png" alt="">
+                        <img class="health-logo"
+                        src="images/svg/yoda.svg" alt="" >
+                        <p class="p-title">Access to Medications</p>
+                        <div class="progress">
+                            <img src="images/svg/prog3.svg" alt="">
+                            <div class="completion">
+                                <p class="percent">70%</p>
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <p class="launch hvr-underline-from-left">
+                            <a href="/">
+                                Launch Project
+                            </a>
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <!--Contact-->
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <div class="contact-left">
+                    <img src="images/png/contact.png" alt="" srcset=""> 
+                </div>
+                <div class="contact-right">
+                    <p class="contact-span">
+                        CONTACT US
+                        <div class="line-c"></div>
+                    </p>
+                    <h1 class="contact-title">
+                        Get In Touch With Us
+                    </h1>
+                    <p class="contact-det">Telephone: +234 816 624 9033<br>
+                    Email address: info@floyfoundation.com</p>
+                    <form action="" class="contact-form" id="contact-form1">
+                        <div class="form-inputs-top">
+                            <div>
+                                <input type="hidden" name="contact_number">
+                                <input placeholder="Name"
+                                name="user_name" id="name"
+                                class="form-fields" type="text" required 
+                            />
+                            </div>
+                            <div>
+                               
+                                <input placeholder="Email address"
+                                name="user_email" id="email"
+                                class="form-fields" type="email" required 
+                            />
+                            </div>
+                        </div>
+                        <div>
+                            
+                            <textarea name="user_message" id="message" class="form-area" cols="30" rows="10" placeholder="Message"></textarea>
+                        </div>
+                        <div class="btn-a">               
+                            <button type="submit" class="form-btn">
+                                <span class="f-b">Submit </span> 
+                                <span class="arrow">&#10230;</span>
+                            </button>
+                         </div>
+                         <p id="myText" class="response"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--Picture Gallery-->
+        <section class="gallery">
+            <div class="gallery-content">
+                <div class="gallery-header">
+                    <p class="gallery-span">
+                        PICTURE GALLERY
+                        <div class="line-p"></div>
+                    </p>
+                    <h1 class="gallery-title">
+                        Pictures Tell A Thousand Words
+                    </h1>
+                </div>
+                <div class="gallery-container">
+                    <!--
+                    <div class="gallery-left">
+
+                    </div>
+                    <div class="gallery-right">
+                        <div class="gallery-grid">
+
+                        </div>
+                        <div class="gallery-grid">
+
+                        </div>
+                    </div>-->
+                    <img src="images/png/gallery-all2.png" alt="" >
+                </div>
+                <div class="gallery-container-m">
+                    <img src="images/png/gallery-m.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--Updates-->
+        <section class="updates" id="updates">
+            <div class="updates-content">
+               <p class="updates-span">
+                   GET UPDATES
+                   <div class="line-u"></div>
+               </p>
+                <h1 class="updates-title">
+                  Get Every Single Feed
+                </h1>
+                <form action="" class="update-form" id="update_form">
+                    <div>
+                        <input type="hidden" name="contact_number">
+                        <input placeholder="Email address"
+                        name="email_sub" id="email-sub"
+                        class="update-field" type="email" required 
+                    />
+                    </div>
+                    <div class="btn-b">               
+                        <button type="submit" class="update-btn">
+                            <div class="pl">
+                                <img src="images/svg/plane.svg" alt="">
+                            </div> 
+                            <span class="subx"> Subscribe  </span> 
+                        </button>
+                     </div>
+                     <p id="myText2" class="response"></p>
+                </form>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-box">
+                    <div class="footer-logo">
+                        <img src="images/svg/logo-c.svg" alt="">
+                        <p class="floy">Floy foundation</p>
+                    </div>
+                    <div class="copy">
+                        <p class="copy-t">Copyright Floy Foundation - 2020.</p>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <h1 class="footer-title">
+                        Get Around
+                    </h1>
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="/">Home</a></li>
+                        <li class="footer-item"><a href="/">About</a></li>
+                        <li class="footer-item"><a href="/">Projects</a></li>
+                        <li class="footer-item"><a href="/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1 class="footer-title">
+                        Social
+                    </h1>
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="/">Facebook</a></li>
+                        <li class="footer-item"> <a href="/">Twitter</a></li>
+                        <li class="footer-item"><a href="/">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h1 class="footer-title">
+                        Contact
+                    </h1> 
+                    <p class="footer-txt">
+                        Telephone:<br>  
+                        +234 816 624 9033
+                    </p>
+                    <p class="footer-txt">
+                        Email Address:<br>  
+                        info@floyfoundation.com
+                    </p>
+                </div>
+            </div>
+            <div class="footer-content-m">
+                <div class="footer-box-2">
+                    <div class="footer-box">
+                        <h1 class="footer-title">
+                            Get Around
+                        </h1>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="/">Home</a></li>
+                            <li class="footer-item"><a href="/">About</a></li>
+                            <li class="footer-item"><a href="/">Projects</a></li>
+                            <li class="footer-item"><a href="/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-box-s">
+                        <h1 class="footer-title">
+                            Social
+                        </h1>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="/">Facebook</a></li>
+                            <li class="footer-item"> <a href="/">Twitter</a></li>
+                            <li class="footer-item"><a href="/">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-box-c">
+                    <h1 class="footer-title">
+                        Contact
+                    </h1> 
+                    <p class="footer-txt">
+                        Telephone:<br>  
+                        +234 816 624 9033
+                    </p>
+                    <p class="footer-txt">
+                        Email Address:<br>  
+                        info@floyfoundation.com
+                    </p>
+                </div>
+                <div class="footer-box-f">
+                    <div class="footer-logo">
+                        <img src="images/svg/logo-c.svg" alt="">
+                        <p class="floy">Floy foundation</p>
+                    </div>
+                    <div class="copy">
+                        <p class="copy-t">Copyright Floy Foundation - 2020.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+    
+    
+    <!--Mobile Menu script-->
+    <script src="js/megamenu.js"></script> 
+</body>
+</html>
